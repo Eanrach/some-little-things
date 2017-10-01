@@ -23,7 +23,7 @@ def W2_random():
     return;
 
 def rerool():
-    ##重新抽卡模块
+    #重新抽卡模块
     ex = input(':')
     if ex == 'exit':
         exit(0)
