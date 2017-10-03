@@ -20,7 +20,6 @@ def W2_random():
     elif d1 != d2:
         print('d', d2+1, dlist[d2]);
     rerool()
-    return()
 
 def rerool():
     #重新抽卡模块
@@ -42,7 +41,6 @@ def rerool():
             print('输入exit退出\n输入rerool重新选择卡牌')
             rerool()
         else:
-            print(':')
             rerool()
 
 si = 0
@@ -55,13 +53,13 @@ def start():
             si = si + 1
             W2_random()
         if st=='exit':
-            exit(0)
+            exit()
         print(start())
     st = input('#')
     while st == 'start':
         W2_random()
     if st == 'exit':
-        exit(0)
+        exit()
     elif st == 'help':
         print('请输入start开始抽牌\n或者exit退出')
     print(start())
