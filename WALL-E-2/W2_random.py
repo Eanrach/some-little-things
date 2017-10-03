@@ -19,35 +19,52 @@ def W2_random():
         print('d', d3+1, dlist[d3]);
     elif d1 != d2:
         print('d', d2+1, dlist[d2]);
-    print(rerool());
-    return;
+    rerool()
+    return()
 
 def rerool():
     #重新抽卡模块
     ex = input(':')
     if ex == 'exit':
-        exit(0)
+        start()
     elif ex == 'rerool':
-        print(W2_random())
+        W2_random()
     elif ex == 'help':
         print('输入exit退出\n输入rerool重新选择卡牌')
-        print(rerool())
+        rerool()
     else:
-        ex = input('输入exit退出\n输入rerool重新选择卡牌\n:')
+        ex = input(':')
         if ex == 'rerool':
-            print(W2_random());
+            W2_random()
         elif ex == 'exit':
-            exit(0)
+            start()
+        elif ex == 'help':
+            print('输入exit退出\n输入rerool重新选择卡牌')
+            rerool()
         else:
-            print('请重新输入\n:')
-            print(rerool())
+            print(':')
+            rerool()
 
+si = 0
 def start():
-    if input('请输入start开始抽牌:') == 'start':
-        print('输入exit退出\n输入rerool重新选择卡牌\n输入help重新显示此提示\n')
-        print(W2_random());
-    else:
-        print(start());
+    global si
+    while si == 0:
+        st=input('请输入start开始抽牌\n或者exit退出\n#')
+        while  st== 'start':
+            print('输入exit退出\n输入rerool重新选择卡牌\n输入help重新显示此提示\n')
+            si = si + 1
+            W2_random()
+        if st=='exit':
+            exit(0)
+        print(start())
+    st = input('#')
+    while st == 'start':
+        W2_random()
+    if st == 'exit':
+        exit(0)
+    elif st == 'help':
+        print('请输入start开始抽牌\n或者exit退出')
+    print(start())
 
 alist = ['有助于', '有害于'];
 blist = '重于';
