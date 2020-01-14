@@ -6,7 +6,7 @@ import sys
 import os
 import re
 
-path = "C:\\Users\\eanra\\Downloads\\多任务输出_2019_12_02_xls"
+path = ""
 
 
 if sys.version_info.major < 3:
